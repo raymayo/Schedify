@@ -1,17 +1,19 @@
-$background: #e3effe;
-$outline: #6488af;
-$pink: #ffd8cc;
-$orange: #ffbd9b;
+$mainBackground: #F0E4D7;
+$boxColor: #F5C0C0;
+$insideColor:#F0E4D7;
+$outline: #FF7171;
+$fontColor: #FF7171;
+
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  color: #459bdb;
+  color: $fontColor;
 }
 
 body {
-  background: $background;
+  background: $mainBackground;
 }
 
 #container {
@@ -36,7 +38,7 @@ th {
 }
 
 th {
-  background-color: $background;
+  background-color: $insideColor;
   font-size: 1vw;
   text-align: center;
 }
@@ -63,12 +65,11 @@ input {
   padding: 5px;
   min-width: auto;
   width: 80px;
-  background-color: $orange;
+  background-color: $insideColor;
   margin: 5px;
-  background: #e3effe;
-  border: none;
+  color: $fontColor;
+  border: solid 2px $outline;
   border-radius: 5px;
-  box-shadow: 3px 3px 4px #cfd9e7, -3px -3px 4px #f7ffff;
 }
 
 #remove {
@@ -80,13 +81,13 @@ input {
 }
 
 #tableContainer {
-  border: 3px solid rgba(255, 255, 255, 0.1);
+  border: $outline 3px solid;
   border-radius: 10px;
-  box-shadow: 4px 4px 5px #cfd9e7, -4px -4px 5px #f7ffff;
   height: 55vh;
   padding: 10px;
   overflow-x: auto;
   width: 80vw;
+  background-color: $boxColor;
 }
 
 *::-webkit-scrollbar {
@@ -98,3 +99,4 @@ table {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
